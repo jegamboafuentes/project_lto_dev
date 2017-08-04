@@ -1,0 +1,28 @@
+{
+  "name": "project_lto",
+  "version": "1.0.0",
+  "description": "System to takeover lease from used cars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Project",
+    "LTO",
+    "takeover",
+    "lease",
+    "lease",
+    "LTO"
+  ],
+  "author": "Enrique Gamboa",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-ui-router": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "boostrap": "^1.0.0",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.5"
+  }
+}
