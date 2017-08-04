@@ -15,4 +15,4 @@ var userSchema = new Schema({
  
 var user = mongoose.model('users', userSchema); //Database name + Docuement
  
-module.exports = user;
+module.exports = user; 

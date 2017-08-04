@@ -2,7 +2,7 @@ var mongoose = require("mongoose"),
  Schema = mongoose.Schema,
  objectId = mongoose.Schema.ObjectId;
  
-var userSchema = new Schema({
+var carSchema = new Schema({
  _id: { type: objectId, auto: true },
  idUser: { type: String, required: true },
  cBrand: { type: String, required: true },
@@ -17,6 +17,6 @@ var userSchema = new Schema({
  versionKey: false
 });
  
-var user = mongoose.model('cars', userSchema); //Database name + Docuement
+var user = mongoose.model('cars', carSchema); //Database name + Docuement
  
 module.exports = user;
