@@ -1,0 +1,20 @@
+<h2>Cars of *name*</h2>
+ 
+<table class="table" ng-if="cars.length>0">
+ <tr>
+ <th>Make</th>
+ <th>Model</th>
+ <th></th>
+ </tr>
+ <tr ng-repeat="car in cars">
+ <td>{{car.cBrand }}</td>
+ <td>{{car.cModel }}</td>     
+ <td>
+    <a ui-sref="editCar({id:car._id})">Edit</a> |
+    <a href="#" ng-click="deleteCar(car._id)">Delete</a>
+ </td>
+ </tr>
+</table>
+<div ng-if="cars.length==0">
+ User doesn't have any car 
+</div>

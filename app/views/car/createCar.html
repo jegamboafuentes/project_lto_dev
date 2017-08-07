@@ -1,0 +1,66 @@
+<h2 ng-show="car._id!=null">Edit</h2>
+<h2 ng-hide="car._id!=null">Create</h2>
+<hr>
+<form name="carForm" ng-submit="saveDataCar(car)" novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2">Year</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="car.cYear" name="cYear" ng-required="true" class="form-control" />
+            <p ng-show="carForm.cYear.$error.required && (carForm.$submitted || carForm.cYear.$dirty)" class="text-danger">Please enter car year.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Make</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="car.cBrand" name="cBrand" ng-required="true" class="form-control" />
+            <p ng-show="carForm.cBrand.$error.required && (carForm.$submitted || carForm.cBrand.$dirty)" class="text-danger">Please enter car make.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Model</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="car.cModel" name="cModel" ng-required="true" class="form-control" />
+            <p ng-show="carForm.cModel.$error.required && (carForm.$submitted || carForm.cModel.$dirty)" class="text-danger">Please enter car model.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Milage per year</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="car.cMilagePerYear" name="cMilagePerYear" ng-required="true" class="form-control" />
+            <p ng-show="carForm.cMilagePerYear.$error.required && (carForm.$submitted || carForm.cMilagePerYear.$dirty)" class="text-danger">Please enter milage allowed per year.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Mileage now</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="car.cMilageNow" name="cMilageNow" ng-required="true" class="form-control" />
+            <p ng-show="carForm.cMilageNow.$error.required && (carForm.$submitted || carForm.cMilageNow.$dirty)" class="text-danger">Please enter actuall mileage.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Lease termn</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="car.cLeaseTermn" name="cLeaseTermn" ng-required="true" class="form-control" />
+            <p ng-show="carForm.cLeaseTermn.$error.required && (carForm.$submitted || carForm.cLeaseTermn.$dirty)" class="text-danger">Please enter lease termn.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Monthly payment</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="car.cMonthlyPayment" name="email" ng-required="true" class="form-control" />
+            <p ng-show="carForm.cMonthlyPayment.$error.required && (carForm.$submitted || carForm.cMonthlyPayment.$dirty)" class="text-danger">Please monthly payment.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Year and month got it</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="car.cYearAndMonthGotIt" name="cYearAndMonthGotIt" ng-required="true" class="form-control" />
+            <p ng-show="carForm.cYearAndMonthGotIt.$error.required && (carForm.$submitted || carForm.cYearAndMonthGotIt.$dirty)" class="text-danger">Please enter month and yer when you got your car.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Update" class="btn btn-primary" ng-show="car._id!=null" />
+            <input type="submit" value="Save" class="btn btn-primary" ng-hide="car._id!=null" /> <a ui-sref="cars" class="btn btn-warning">Cancel</a> </div>
+    </div>
+</form>

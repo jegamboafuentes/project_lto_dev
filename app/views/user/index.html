@@ -6,6 +6,8 @@
  <th>Last name</th>
  <th>Phone number</th>
  <th>email</th>
+ <th></th>
+ <th></th>
  </tr>
  <tr ng-repeat="user in users">
  <td>{{user.name }}</td>
@@ -15,6 +17,10 @@
  <td>
     <a ui-sref="edit({id:user._id})">Edit</a> |
     <a href="#" ng-click="deleteUser(user._id)">Delete</a>
+ </td>
+ <td>
+    <a ui-sref="carsbyuser({id:user._id})">View Cars</a> |
+    <a ui-sref="createCar({id:user._id})">Add Car</a>
  </td>
  </tr>
 </table>
