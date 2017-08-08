@@ -16,9 +16,9 @@
             url: "/edit/:id"
             , templateUrl: "/views/user/createUser.html"
             , controller: "userController"
-        }).state("details", {
+        }).state("userDetails", {
             url: "/details/:id"
-            , templateUrl: "/views/user/details.html"
+            , templateUrl: "/views/user/userDetails.html"
             , controller: "userController"
         }).state("cars", {
             url: "/cars"

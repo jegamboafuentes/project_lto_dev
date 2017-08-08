@@ -1,29 +1,20 @@
 <h2>Users Listing</h2>
- 
 <table class="table" ng-if="users.length>0">
- <tr>
- <th>Name</th>
- <th>Last name</th>
- <th>Phone number</th>
- <th>email</th>
- <th></th>
- <th></th>
- </tr>
- <tr ng-repeat="user in users">
- <td>{{user.name }}</td>
- <td>{{user.lastName }}</td>
- <td>{{user.phoneNumber }}</td>
- <td>{{user.email }}</td>     
- <td>
-    <a ui-sref="edit({id:user._id})">Edit</a> |
-    <a href="#" ng-click="deleteUser(user._id)">Delete</a>
- </td>
- <td>
-    <a ui-sref="carsbyuser({id:user._id})">View Cars</a> |
-    <a ui-sref="createCar({id:user._id})">Add Car</a>
- </td>
- </tr>
+    <tr>
+        <th>Details</th>
+        <th>Name</th>
+        <th>Last name</th>
+        <th># Cars</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="user in users">
+        <td>
+            <a href="#"> <span ui-sref="userDetails({id:user._id})" class="glyphicon glyphicon-user" aria-hidden="true"></span> </a>
+        </td>
+        <td>{{user.name }}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.nCars}}</td>
+        <td> <a ui-sref="carsbyuser({id:user._id})">View Cars</a> | <a ui-sref="createCar({id:user._id})">Add Car</a> </td>
+    </tr>
 </table>
-<div ng-if="users.length==0">
- No record found !!
-</div>
+<div ng-if="users.length==0"> No record found !! </div>

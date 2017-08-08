@@ -1,0 +1,38 @@
+<h2>Users details</h2>
+<div class="panel panel-info">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-3">{{user.name}}</div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-5">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" ui-sref="edit({id:user._id})">Update</button>
+                    <button type="button" class="btn btn-default" ui-sref="carsbyuser({id:user._id})">View cars</button>
+                    <button type="button" class="btn btn-danger" ng-click="deleteUser(user._id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>First Name</th>
+                    <td>{{user.name }}</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>{{user.lastName }}</td>
+                </tr>
+                <tr>
+                    <th>Phone number</th>
+                    <td>{{user.phoneNumber }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{user.email }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
