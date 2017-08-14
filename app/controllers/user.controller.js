@@ -5,24 +5,24 @@
 
     function Controller($scope, $rootScope, userService, $state, $stateParams) {
         $scope.users = [];
+        var usersVar = [];
         if ($state.current.name == "users") {
             $rootScope.Title = "User Listing";
             userService.getUsers().then(function (res) {
-                $scope.users = res.data;
                 //Added by Enrique
-                for (var i = 0; i < $scope.users.length; i++) {
-                    var carObjectList=[];
-                    var nCarsPerUserList=[];
-                    userService.getCarByUser($scope.users[i]._id).then(function (res2) {
+                usersVar = res.data;
+                function getCarByUserFunction(i) {
+                      userService.getCarByUser(usersVar[i]._id).then(function (res2) {
                         var carObject = res2.data;
-                        var nCarsPerUser = carObject.length;  
-                        carObjectList[i] = carObject;
-                        nCarsPerUserList[i]=nCarsPerUser
+                        usersVar[i].nCars = carObject.length;
                     });
-// ********** 8/8/17 Jus put the fucking nCarsPerUser on the array 
-                    $scope.users[i].nCars = "Puto";
-                    //$scope.users[i].nCars = nCarsPerUser;
                 }
+                var carObjectList = [];
+                for (var i = 0; i < usersVar.length; i++) {
+                    carObjectList[i] = getCarByUserFunction(i);
+                }
+                $scope.users = usersVar;
+                //End Added by Enrique
             }).catch(function (err) {
                 console.log(err);
             });

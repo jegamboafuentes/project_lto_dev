@@ -1,12 +1,14 @@
-<h2>Cars of -*Customer name*-</h2>
+<h2>Cars of {{car.cBrand}}</h2>
  
 <table class="table" ng-if="cars.length>0">
  <tr>
+ <th>Car id</th>
  <th>Make</th>
  <th>Model</th>
  <th></th>
  </tr>
  <tr ng-repeat="car in cars">
+ <td>{{car._id }}</td>
  <td>{{car.cBrand }}</td>
  <td>{{car.cModel }}</td>     
  <td>
