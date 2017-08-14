@@ -38,6 +38,7 @@ router.get("/", function (req, res) {
         , lastName: obj.lastName
         , phoneNumber: obj.phoneNumber
         , email: obj.email
+        , zip: obj.zip
     }, function (err) {
         if (err) {
             res.send("error");
