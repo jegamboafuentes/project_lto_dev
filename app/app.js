@@ -24,6 +24,10 @@
             url: "/cars"
             , templateUrl: "/views/car/viewCars.html"
             , controller: "carController"
+        }).state("carDetails", {
+            url: "/carDetail/:id"
+            , templateUrl: "/views/car/carDetails.html"
+            , controller: "carController"
         }).state("carsbyuser", {
             url: "/car/carbyuser/:id"
             , templateUrl: "/views/car/viewCars.html"

@@ -1,22 +1,18 @@
-<h2>Cars of {{car.cBrand}}</h2>
- 
+<h2></h2>
 <table class="table" ng-if="cars.length>0">
- <tr>
- <th>Car id</th>
- <th>Make</th>
- <th>Model</th>
- <th></th>
- </tr>
- <tr ng-repeat="car in cars">
- <td>{{car._id }}</td>
- <td>{{car.cBrand }}</td>
- <td>{{car.cModel }}</td>     
- <td>
-    <a ui-sref="editCar({id:car._id})">Edit</a> |
-    <a href="#" ng-click="deleteCar(car._id)">Delete</a>
- </td>
- </tr>
+    <tr>
+        <th>Car details</th>
+        <th>Car id</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="car in cars">
+        <td><a href="#"><span ui-sref="carDetails({id:car._id})" class="glyphicon glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></td>
+        <td>{{car._id }}</td>
+        <td>{{car.cBrand }}</td>
+        <td>{{car.cModel }}</td>
+        <td><a ui-sref="userDetails({id:car.idUser})">View User</a></td>
+    </tr>
 </table>
-<div ng-if="cars.length==0">
- User doesn't have any car 
-</div>
+<div ng-if="cars.length==0"> User doesn't have any car </div>

@@ -1,0 +1,62 @@
+<h2>Car details</h2>
+<div class="panel panel-info">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-5">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" ui-sref="editCar({id:car._id})">Update</button>
+                    <button type="button" class="btn btn-default" ui-sref="userDetails({id:car.idUser})">View user</button>
+                    <button type="button" class="btn btn-danger" ng-click="deleteCar(car._id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Id Car</th>
+                    <td>{{car._id }}</td>
+                </tr>
+                <tr>
+                    <th>Id User</th>
+                    <td>{{car.idUser }}</td>
+                </tr>
+                <tr>
+                    <th>Year</th>
+                    <td>{{car.cYear}}</td>
+                </tr>
+                <tr>
+                    <th>Make</th>
+                    <td>{{car.cBrand}}</td>
+                </tr>
+                <tr>
+                    <th>Model</th>
+                    <td>{{car.cModel}}</td>
+                </tr>
+                <tr>
+                    <th>Milages per year</th>
+                    <td>{{car.cMilagePerYear}}</td>
+                </tr>
+                <tr>
+                    <th>Mileage now</th>
+                    <td>{{car.cMilageNow}}</td>
+                </tr>
+                <tr>
+                    <th>Lease termn</th>
+                    <td>{{car.cLeaseTermn}}</td>
+                </tr>
+                <tr>
+                    <th>Monthly Payment</th>
+                    <td>{{car.cMonthlyPayment}}</td>
+                </tr>
+                <tr>
+                    <th>Year and month got it</th>
+                    <td>{{car.cYearAndMonthGotIt}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

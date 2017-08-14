@@ -84,6 +84,27 @@
                 }
             };
         }
+        else if ($state.current.name == "carDetails") {
+            $rootScope.Title = "User *- NAME -*";
+            var id = $stateParams.id;
+            carService.getCar(id).then(function (res) {
+                $scope.car = res.data;
+            }).catch(function (err) {
+                console.log(err);
+            });
+            $scope.deleteCar = function (id) {
+                if (confirm('Are you sure to delete this car?')) {
+                    carService.deleteCar(id).then(function (res) {
+                        if (res.data == "deleted") {
+                            $state.go("cars", {}, {
+                                reload: true
+                            });
+                        }
+                    }).catch(function (err) {
+                        console.log(err);
+                    });
+                }
+            };
+        }
     }
 })();
-
