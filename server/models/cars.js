@@ -12,7 +12,7 @@ var carSchema = new Schema({
  cMilageNow : { type: String, required: true }, 
  cLeaseTermn: { type: String, required: true },
  cMonthlyPayment: { type: String, required: true },
- cYearAndMonthGotIt: { type: String, required: true }
+ cYearAndMonthGotIt: { type: String, required: true } 
 }, {
  versionKey: false
 });
