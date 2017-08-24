@@ -34,11 +34,16 @@ router.get("/", function (req, res) {
     var id = req.params.id;
     var obj = req.body;
     user.findByIdAndUpdate(id, {
-        name: obj.name
+        firstName: obj.firstName
         , lastName: obj.lastName
         , phoneNumber: obj.phoneNumber
         , email: obj.email
+        , address1: obj.address1
+        , address2: obj.address2
+        , city: obj.city
+        , state: obj.state
         , zip: obj.zip
+        , uRegisterDate: obj.uRegisterDate
     }, function (err) {
         if (err) {
             res.send("error");

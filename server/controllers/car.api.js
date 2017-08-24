@@ -36,7 +36,7 @@ router.get("/", function (req, res) {
     var model = new car(obj);
     model.save(function (err) {
         if (err) {
-            res.send("error");
+            res.send("error"+err);
             return;
         }
         res.send("created");
@@ -46,14 +46,21 @@ router.get("/", function (req, res) {
     var obj = req.body;
     car.findByIdAndUpdate(id, {
         idUser: obj.idUser
-        , cBrand: obj.cBrand
-        , cModel: obj.cModel
+        
         , cYear: obj.cYear
-        , cMilagePerYear: obj.cMilagePerYear
-        , cMilageNow: obj.cMilageNow
-        , cLeaseTermn: obj.cLeaseTermn
+        , cMake: obj.cMake
+        , cModel: obj.cModel
+        , cVinNumber: obj.cVinNumber
+        , idLeaseCompany: obj.idLeaseCompany
+        , cMilesPerYear: obj.cMilesPerYear
+        , cMilesNow: obj.cMilesNow
+        , cMilesRemaining: obj.cMilesRemaining
+        , cTotalLeaseTerm: obj.cTotalLeaseTerm
         , cMonthlyPayment: obj.cMonthlyPayment
-        , cYearAndMonthGotIt: obj.cYearAndMonthGotIt
+        , cDownPayment: obj.cDownPayment
+        , cDateGetIt: obj.cDateGetIt
+        , cDateEndIt: obj.cDateEndIt
+        , cRegisterDate: obj.cRegisterDate
     }, function (err) {
         if (err) {
             res.send("error");

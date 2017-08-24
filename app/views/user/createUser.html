@@ -5,41 +5,70 @@
     <div class="form-group">
         <label class="col-md-2">Name</label>
         <div class="col-md-10">
-            <input type="text" ng-model="user.name" name="name" ng-required="true" class="form-control" />
-            <p ng-show="userForm.name.$error.required && (userForm.$submitted || userForm.name.$dirty)" class="text-danger">Please Enter Name</p>
+            <input type="text" ng-model="user.firstName" name="firstName" ng-required="true" class="form-control" />
+            <p ng-show="userForm.firstName.$error.required && (userForm.$submitted || userForm.firstName.$dirty)" class="text-danger">Please Enter Name</p>
         </div>
     </div>
     <div class="form-group">
         <label class="col-md-2">Last name</label>
         <div class="col-md-10">
             <input type="text" ng-model="user.lastName" name="lastName" ng-required="true" class="form-control" />
-            <p ng-show="userForm.address.$error.required && (userForm.$submitted || userForm.lastName.$dirty)" class="text-danger">Please Enter Last name</p>
+            <p ng-show="userForm.lastName.$error.required && (userForm.$submitted || userForm.lastName.$dirty)" class="text-danger">Please Enter Last name</p>
         </div>
     </div>
     <div class="form-group">
         <label class="col-md-2">Phone number</label>
         <div class="col-md-10">
             <input type="text" ng-model="user.phoneNumber" name="phoneNumber" ng-required="true" class="form-control" />
-            <p ng-show="userForm.contactNo.$error.required && (userForm.$submitted || userForm.phoneNumber.$dirty)" class="text-danger">Please Enter Phone number.</p>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-md-2">Zip code</label>
-        <div class="col-md-10">
-            <input type="text" ng-model="user.zip" name="zip" ng-required="true" class="form-control" />
-            <p ng-show="userForm.zip.$error.required && (userForm.$submitted || userForm.zip.$dirty)" class="text-danger">Please Enter Zip code.</p>
+            <p ng-show="userForm.phoneNumber.$error.required && (userForm.$submitted || userForm.phoneNumber.$dirty)" class="text-danger">Please Enter Phone number.</p>
         </div>
     </div>
     <div class="form-group">
         <label class="col-md-2">Email</label>
         <div class="col-md-10">
             <input type="text" ng-model="user.email" name="email" ng-required="true" class="form-control" />
-            <p ng-show="userForm.contactNo.$error.required && (userForm.$submitted || userForm.email.$dirty)" class="text-danger">Please Enter email.</p>
+            <p ng-show="userForm.email.$error.required && (userForm.$submitted || userForm.email.$dirty)" class="text-danger">Please Enter email.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Address</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="user.address1" name="address1" ng-required="true" class="form-control" />
+            <p ng-show="userForm.address1.$error.required && (userForm.$submitted || userForm.address1.$dirty)" class="text-danger">Please Enter Address.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Address 2</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="user.address2" name="address2" ng-required="true" class="form-control" />
+            <p ng-show="userForm.address2.$error.required && (userForm.$submitted || userForm.address2.$dirty)" class="text-danger">Please Enter address 2.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">City</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="user.city" name="city" ng-required="true" class="form-control" />
+            <p ng-show="userForm.city.$error.required && (userForm.$submitted || userForm.city.$dirty)" class="text-danger">Please Enter city.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">State</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="user.state" name="state" ng-required="true" class="form-control" />
+            <p ng-show="userForm.state.$error.required && (userForm.$submitted || userForm.state.$dirty)" class="text-danger">Please Enter email.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Zip</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="user.zip" name="zip" ng-required="true" class="form-control" />
+            <p ng-show="userForm.contactNo.$error.required && (userForm.$submitted || userForm.zip.$dirty)" class="text-danger">Please Enter Zip code.</p>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Update" class="btn btn-primary" ng-show="user._id!=null" />
-            <input type="submit" value="Save" class="btn btn-primary" ng-hide="user._id!=null" /> <a ui-sref="users" class="btn btn-warning">Cancel</a> </div>
-    </div>
+            <input type="submit" value="Update" class="btn btn-primary" ng-show="car._id!=null" />
+            <input type="submit" value="Save" class="btn btn-primary" ng-hide="car._id!=null" /> <a ui-sref="cars" class="btn btn-warning">Cancel</a> </div>
+    </div>d
+    
 </form>
